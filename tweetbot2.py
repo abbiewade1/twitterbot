@@ -1,14 +1,14 @@
 from twython import Twython
 import csv
 
-CONSUMER_KEY = ''
-CONSUMER_SECRET = ''
-ACCESS_TOKEN = ''
-ACCESS_TOKEN_SECRET = ''
+CONSUMER_KEY = 'R2pWRXsbIvXqkHxljWC7muqf4'
+CONSUMER_SECRET = 'RIPuyuK8wdd81M23xDqxSWUiwcBaQO5q4TbkfiqIEAIq8T4x1C'
+ACCESS_TOKEN = '2806069908-UMVC9dsiI4gMqSBdDSKU1YiJ1fG8gOV0YY0dqCx'
+ACCESS_TOKEN_SECRET = 'F93y3Nn9wgaPG91iX1Gm3nPsy5jrZCa00dVIYkYabLK8I'
 
 twitter = Twython(CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 
-search = twitter.search(q='YOUR SEARCH TERM HERE', count="100")
+search = twitter.search(q='nonprofit', count="100")
 tweets = search['statuses']
 
 with open ('data.csv', 'w') as fp:
